@@ -7,9 +7,8 @@
   
 </br>
 
-<img src="https://github.com/PerPab/SpecsMonitor/blob/master/specs.jpg" height="310" width="310"></img>
-<img src="https://github.com/PerPab/ExploradorArchivos/blob/master/foto2.png" height="310" width="310"></img>
-<img src="https://github.com/PerPab/ExploradorArchivos/blob/master/foto3.jpg" height="310" width="310"></img>
+<img src="https://github.com/PerPab/SpecsMonitor/blob/master/specs.jpg" ></img>
+
 
 
 
