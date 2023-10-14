@@ -23,6 +23,8 @@ using Microsoft.VisualBasic.Devices;
 using System.IO;
 using Microsoft.VisualBasic.ApplicationServices;
 using ProgressBar = System.Windows.Controls.ProgressBar;
+using static System.Net.Mime.MediaTypeNames;
+using MouseEventArgs = System.Windows.Forms.MouseEventArgs;
 
 namespace NuevaApp
 {
@@ -47,6 +49,8 @@ namespace NuevaApp
 
 
         }
+
+        
 
         public void GetUser()
         {
@@ -199,6 +203,34 @@ namespace NuevaApp
 
             }
             
+        }
+
+        private void Window_MouseDown_1(object sender, MouseButtonEventArgs e)
+        {
+
+            if (e.ChangedButton == MouseButton.Left)
+                this.DragMove();
+
+        }
+
+        private void btnClose_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            this.Close();
+        }
+
+
+        
+
+        private void btnClose_MouseEnter(object sender, System.Windows.Input.MouseEventArgs e)
+        {
+            string packUri = @"D:\teleretro\NuevaApp\NuevaApp\assets\powerDown.png";
+            btnClose.Source = new ImageSourceConverter().ConvertFromString(packUri) as ImageSource;
+        }
+
+        private void btnClose_MouseLeave(object sender, System.Windows.Input.MouseEventArgs e)
+        {
+            string packUri = @"D:\teleretro\NuevaApp\NuevaApp\assets\power.png";
+            btnClose.Source = new ImageSourceConverter().ConvertFromString(packUri) as ImageSource;
         }
     }
 }

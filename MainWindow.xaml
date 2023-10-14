@@ -5,22 +5,21 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:NuevaApp"
         mc:Ignorable="d"
-        Title="MainWindow" Height="750" Width="980"
+        Title="MainWindow" Height="750" Width="870"
         WindowStartupLocation="CenterScreen"
         Background="Transparent"
         AllowsTransparency="True"
-        WindowStyle="None"
+        WindowStyle="None" MouseDown="Window_MouseDown_1"
+        
         >
     <Grid >
 
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="870"></ColumnDefinition>
-            <ColumnDefinition Width="110" ></ColumnDefinition>
+
         </Grid.ColumnDefinitions>
 
-        <Grid Grid.Column="1" Background="AliceBlue" Height="695">
-            
-        </Grid>
+
 
         <Grid Height="700" Width="870" Grid.Column="0">
             <Grid.RowDefinitions>
@@ -32,21 +31,25 @@
 
             <Canvas Grid.Row="0" Background="White" Margin="0,0,0,5" >
 
+
+
+
                 <Label Content="INFORMACION GENERAL" Canvas.Left="358" Canvas.Top="10" FontFamily="Cascadia Mono" HorizontalAlignment="Left" VerticalAlignment="Center"></Label>
                 <Label Content="USUARIO:" Canvas.Left="450" Canvas.Top="48" FontFamily="Cascadia Mono" HorizontalAlignment="Left" VerticalAlignment="Top" Width="67"></Label>
                 <Label Content="SISTEMA:" Canvas.Left="28" Canvas.Top="90" FontFamily="Cascadia Mono" HorizontalAlignment="Left" VerticalAlignment="Center"></Label>
                 <Label Content="PROCESADOR:" Canvas.Left="28" Canvas.Top="132" FontFamily="Cascadia Mono" HorizontalAlignment="Left" VerticalAlignment="Center"></Label>
-                <TextBox Name="usuarioText" Canvas.Left="521" TextWrapping="Wrap" Canvas.Top="48" Height="20" Width="286" HorizontalAlignment="Left" VerticalAlignment="Center" BorderThickness="1" FontFamily="Cascadia Mono SemiLight"/>
-                <TextBox Name="OStext" Canvas.Left="115" TextWrapping="Wrap" Canvas.Top="92" Width="328" Height="20" HorizontalAlignment="Left" VerticalAlignment="Center" BorderThickness="1" FontFamily="Cascadia Mono SemiLight"/>
-                <TextBox Name="CPUtext" Canvas.Left="115" TextWrapping="Wrap" Canvas.Top="134" Width="328" Height="20" HorizontalAlignment="Left" VerticalAlignment="Center" BorderThickness="1" FontFamily="Cascadia Mono SemiLight"/>
+                <TextBox BorderThickness="0" IsReadOnly="True" Name="usuarioText" Canvas.Left="521" TextWrapping="Wrap" Canvas.Top="52" Height="20" Width="286" HorizontalAlignment="Center" VerticalAlignment="Top" FontFamily="Cascadia Mono SemiLight"/>
+                <TextBox BorderThickness="0" IsReadOnly="True" Name="OStext" Canvas.Left="115" TextWrapping="Wrap" Canvas.Top="94" Width="328" Height="20" HorizontalAlignment="Center" VerticalAlignment="Top"  FontFamily="Cascadia Mono SemiLight"/>
+                <TextBox BorderThickness="0" IsReadOnly="True" Name="CPUtext" Canvas.Left="115" TextWrapping="Wrap" Canvas.Top="136" Width="328" Height="20" HorizontalAlignment="Center" VerticalAlignment="Top"  FontFamily="Cascadia Mono SemiLight"/>
                 <Label Content="MODELO:" Canvas.Left="28" Canvas.Top="46" FontFamily="Cascadia Mono" HorizontalAlignment="Left" VerticalAlignment="Center" Width="61"/>
-                <TextBox Name="modeloText" Canvas.Left="115" TextWrapping="Wrap" Canvas.Top="48" Height="20" Width="328" BorderThickness="1" FontFamily="Cascadia Mono SemiLight" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                <TextBox BorderThickness="0" IsReadOnly="True" Name="modeloText" Canvas.Left="115" TextWrapping="Wrap" Canvas.Top="50" Height="20" Width="328"  FontFamily="Cascadia Mono SemiLight" HorizontalAlignment="Center" VerticalAlignment="Top"/>
                 <Label Content="VIDEO:" Canvas.Left="29" Canvas.Top="174" FontFamily="Cascadia Mono" HorizontalAlignment="Center" VerticalAlignment="Top" Width="59"/>
-                <TextBox Name="videoTexto" Canvas.Left="115" TextWrapping="Wrap" Canvas.Top="175" Height="22" Width="387" BorderThickness="1" FontFamily="Cascadia Mono SemiLight" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                <TextBox BorderThickness="0" IsReadOnly="True" Name="videoTexto" Canvas.Left="115" TextWrapping="Wrap" Canvas.Top="176" Height="22" Width="387"  FontFamily="Cascadia Mono SemiLight" HorizontalAlignment="Center" VerticalAlignment="Top"/>
                 <Label Content="BATERIA:" Canvas.Left="451" Canvas.Top="92" FontFamily="Cascadia Mono" Width="68" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-                <TextBox Name="bateriaText" Canvas.Left="521" TextWrapping="Wrap" Canvas.Top="92" Height="20" Width="286" BorderThickness="1" FontFamily="Cascadia Mono SemiLight" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                <TextBox BorderThickness="0" IsReadOnly="True" Name="bateriaText" Canvas.Left="521" TextWrapping="Wrap" Canvas.Top="95" Height="20" Width="286"  FontFamily="Cascadia Mono SemiLight" HorizontalAlignment="Center" VerticalAlignment="Top"/>
                 <Label Name="cargaText" Content="CARGA" Canvas.Left="614" Canvas.Top="128" FontFamily="Cascadia Mono" Width="140" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                 <ProgressBar Name="bar" Height="54" Canvas.Left="561" Canvas.Top="158" Width="246" HorizontalAlignment="Left" VerticalAlignment="Center" Minimum="0" Maximum="100"/>
+                <Image x:Name="btnClose" Source="/power.png"  MouseDown="btnClose_MouseDown"  MouseEnter="btnClose_MouseEnter" MouseLeave="btnClose_MouseLeave" Height="47" Canvas.Left="820" Width="55" HorizontalAlignment="Left" VerticalAlignment="Center" Canvas.Top="2" />
 
 
 
@@ -60,13 +63,13 @@
             <Canvas Grid.Row="1" Background="White" Margin="0,5,0,5" >
                 <Label Content="MEMORIA" Canvas.Left="400" Canvas.Top="10" FontFamily="Cascadia Mono" HorizontalAlignment="Left" VerticalAlignment="Center"></Label>
                 <Label Content="MEMORIA RAM TOTAL:" Canvas.Left="33" Canvas.Top="62" FontFamily="Cascadia Mono" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-                <TextBox Name="ramTotal" Canvas.Left="205" TextWrapping="Wrap" Canvas.Top="64" Width="56" Height="20" BorderThickness="1" FontFamily="Cascadia Mono SemiLight" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <TextBox BorderThickness="0" IsReadOnly="True" Name="ramTotal" Canvas.Left="205" TextWrapping="Wrap" Canvas.Top="66" Width="56" Height="20" FontFamily="Cascadia Mono SemiLight" HorizontalAlignment="Center" VerticalAlignment="Top"/>
                 <Label Content="MEMORIA RAM DISPONIBLE:" Canvas.Left="33" Canvas.Top="106" FontFamily="Cascadia Mono" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-                <TextBox Name="ramDisp" Canvas.Left="205" TextWrapping="Wrap" Canvas.Top="108" Width="56" Height="20" BorderThickness="1" FontFamily="Cascadia Mono SemiLight" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <TextBox BorderThickness="0" IsReadOnly="True" Name="ramDisp" Canvas.Left="205" TextWrapping="Wrap" Canvas.Top="110" Width="56" Height="20"  FontFamily="Cascadia Mono SemiLight" HorizontalAlignment="Center" VerticalAlignment="Top"/>
                 <Label Content="VELOCIDAD:" Canvas.Left="33" Canvas.Top="151" FontFamily="Cascadia Mono" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-                <TextBox Name="ramVel" Canvas.Left="205" TextWrapping="Wrap" Canvas.Top="153" Width="116" Height="20" BorderThickness="1" FontFamily="Cascadia Mono SemiLight" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-                <ProgressBar Name="barRam" Height="90" Canvas.Left="408" Canvas.Top="83" Width="400" HorizontalAlignment="Center" VerticalAlignment="Top" Minimum="0"/>
-                <Label Name="usoRamText" Content="USO DE RAM" Canvas.Left="568" Canvas.Top="50" FontFamily="Cascadia Mono" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                <TextBox BorderThickness="0" IsReadOnly="True" Name="ramVel" Canvas.Left="205" TextWrapping="Wrap" Canvas.Top="155" Width="116" Height="20"  FontFamily="Cascadia Mono SemiLight" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                <ProgressBar Name="barRam" Height="65" Canvas.Left="460" Canvas.Top="130" Width="357" HorizontalAlignment="Left" VerticalAlignment="Top" Minimum="0"/>
+                <Label Name="usoRamText" Content="USO DE RAM" Canvas.Left="584" Canvas.Top="88" FontFamily="Cascadia Mono" HorizontalAlignment="Left" VerticalAlignment="Center"/>
 
             </Canvas>
 

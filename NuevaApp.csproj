@@ -97,5 +97,20 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="cables.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="wire.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="assets\power.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="power.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="assets\powerDown.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
