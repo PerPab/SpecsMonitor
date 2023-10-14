@@ -10,6 +10,8 @@
 <img>https://github.com/PerPab/SpecsMonitor/blob/master/specs.jpg</img>
 
 
+
+
 </br>
 
   
