@@ -1,0 +1,90 @@
+﻿<Window x:Class="NuevaApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NuevaApp"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="750" Width="960"
+        WindowStartupLocation="CenterScreen"
+        Background="Transparent"
+        AllowsTransparency="True"
+        WindowStyle="None"
+        >
+    <Grid >
+
+        <Grid Height="700" Width="870">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+
+            
+            <Canvas Grid.Row="0" Background="White" Margin="5, 5, 5 , 10" >
+
+                <Label Content="INFORMACION GENERAL" Canvas.Left="358" Canvas.Top="10" FontFamily="Cascadia Mono" HorizontalAlignment="Left" VerticalAlignment="Center"></Label>
+                <Label Content="USUARIO:" Canvas.Left="450" Canvas.Top="48" FontFamily="Cascadia Mono" HorizontalAlignment="Left" VerticalAlignment="Top" Width="67"></Label>
+                <Label Content="SISTEMA:" Canvas.Left="28" Canvas.Top="90" FontFamily="Cascadia Mono" HorizontalAlignment="Left" VerticalAlignment="Center"></Label>
+                <Label Content="PROCESADOR:" Canvas.Left="28" Canvas.Top="132" FontFamily="Cascadia Mono" HorizontalAlignment="Left" VerticalAlignment="Center"></Label>
+                <TextBox Name="usuarioText" Canvas.Left="521" TextWrapping="Wrap" Canvas.Top="48" Height="20" Width="286" HorizontalAlignment="Left" VerticalAlignment="Center" BorderThickness="1" FontFamily="Cascadia Mono SemiLight"/>
+                <TextBox Name="OStext" Canvas.Left="115" TextWrapping="Wrap" Canvas.Top="92" Width="328" Height="20" HorizontalAlignment="Left" VerticalAlignment="Center" BorderThickness="1" FontFamily="Cascadia Mono SemiLight"/>
+                <TextBox Name="CPUtext" Canvas.Left="115" TextWrapping="Wrap" Canvas.Top="134" Width="328" Height="20" HorizontalAlignment="Left" VerticalAlignment="Center" BorderThickness="1" FontFamily="Cascadia Mono SemiLight"/>
+                <Label Content="MODELO:" Canvas.Left="28" Canvas.Top="46" FontFamily="Cascadia Mono" HorizontalAlignment="Left" VerticalAlignment="Center" Width="61"/>
+                <TextBox Name="modeloText" Canvas.Left="115" TextWrapping="Wrap" Canvas.Top="48" Height="20" Width="328" BorderThickness="1" FontFamily="Cascadia Mono SemiLight" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                <Label Content="VIDEO:" Canvas.Left="29" Canvas.Top="174" FontFamily="Cascadia Mono" HorizontalAlignment="Center" VerticalAlignment="Top" Width="59"/>
+                <TextBox Name="videoTexto" Canvas.Left="115" TextWrapping="Wrap" Canvas.Top="175" Height="22" Width="387" BorderThickness="1" FontFamily="Cascadia Mono SemiLight" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                <Label Content="BATERIA:" Canvas.Left="451" Canvas.Top="92" FontFamily="Cascadia Mono" Width="68" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                <TextBox Name="bateriaText" Canvas.Left="521" TextWrapping="Wrap" Canvas.Top="92" Height="20" Width="286" BorderThickness="1" FontFamily="Cascadia Mono SemiLight" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                <Label Content="CARGA:" Canvas.Left="452" Canvas.Top="134" FontFamily="Cascadia Mono" Width="68" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                <ProgressBar Name="bar" Height="20" Canvas.Left="521" Canvas.Top="134" Width="286" HorizontalAlignment="Left" VerticalAlignment="Center" Minimum="0" Maximum="100"/>
+
+
+
+            </Canvas>
+           
+
+
+            <Canvas Grid.Row="1" Background="White" Margin="5, 5, 5 , 10">
+                <Label Content="MEMORIA" Canvas.Left="400" Canvas.Top="10" FontFamily="Cascadia Mono" HorizontalAlignment="Left" VerticalAlignment="Center"></Label>
+                <Label Content="MEMORIA RAM TOTAL:" Canvas.Left="33" Canvas.Top="62" FontFamily="Cascadia Mono" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <TextBox Name="ramTotal" Canvas.Left="205" TextWrapping="Wrap" Canvas.Top="64" Width="56" Height="20" BorderThickness="1" FontFamily="Cascadia Mono SemiLight" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <Label Content="MEMORIA RAM DISPONIBLE:" Canvas.Left="33" Canvas.Top="106" FontFamily="Cascadia Mono" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <TextBox Name="ramDisp" Canvas.Left="205" TextWrapping="Wrap" Canvas.Top="108" Width="56" Height="20" BorderThickness="1" FontFamily="Cascadia Mono SemiLight" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <Label Content="VELOCIDAD:" Canvas.Left="33" Canvas.Top="151" FontFamily="Cascadia Mono" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <TextBox Name="ramVel" Canvas.Left="205" TextWrapping="Wrap" Canvas.Top="153" Width="116" Height="20" BorderThickness="1" FontFamily="Cascadia Mono SemiLight" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                <ProgressBar Name="barRam" Height="107" Canvas.Left="408" Canvas.Top="83" Width="400" HorizontalAlignment="Left" VerticalAlignment="Top" Minimum="0"/>
+                <Label Content="USO DE RAM" Canvas.Left="568" Canvas.Top="54" FontFamily="Cascadia Mono" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+
+            </Canvas>
+            <Canvas Grid.Row="2" Background="White" Margin="5" >
+                <Label Content="ALMACENAMIENTO" Canvas.Left="376" Canvas.Top="10" FontFamily="Cascadia Mono" HorizontalAlignment="Left" VerticalAlignment="Center"></Label>
+                <Grid Height="168" Width="840" HorizontalAlignment="Center" Canvas.Left="10" VerticalAlignment="Top" Canvas.Top="39">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+
+                    <ListView Margin="10,10,10,10" Name="discos">
+                        <ListView.View>
+                            <GridView>
+                                <GridViewColumn Header="Unidad" Width="150" DisplayMemberBinding="{Binding unidad}"/>
+                                <GridViewColumn Header="Capacidad Total" Width="170" DisplayMemberBinding="{Binding capTotal}" />
+                                <GridViewColumn Header="Espacio Disponible" Width="170"  DisplayMemberBinding="{Binding capDis}"/>
+                                <GridViewColumn Header="Formato" Width="150" DisplayMemberBinding="{Binding formato}" />
+
+                                <GridViewColumn x:Name="diskBar" Header="Uso de Disco" Width="170" DisplayMemberBinding="{Binding progreso}" >
+                               
+                            
+                                </GridViewColumn>
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
+
+                </Grid>
+
+            </Canvas>
+
+        </Grid>
+
+    </Grid>
+</Window>

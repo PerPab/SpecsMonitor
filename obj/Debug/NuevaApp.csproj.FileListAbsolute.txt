@@ -1,0 +1,16 @@
+D:\teleretro\NuevaApp\NuevaApp\bin\Debug\NuevaApp.exe.config
+D:\teleretro\NuevaApp\NuevaApp\bin\Debug\NuevaApp.exe
+D:\teleretro\NuevaApp\NuevaApp\bin\Debug\NuevaApp.pdb
+D:\teleretro\NuevaApp\NuevaApp\obj\Debug\NuevaApp.csproj.AssemblyReference.cache
+D:\teleretro\NuevaApp\NuevaApp\obj\Debug\NuevaApp.csproj.SuggestedBindingRedirects.cache
+D:\teleretro\NuevaApp\NuevaApp\obj\Debug\MainWindow.g.cs
+D:\teleretro\NuevaApp\NuevaApp\obj\Debug\App.g.cs
+D:\teleretro\NuevaApp\NuevaApp\obj\Debug\NuevaApp_MarkupCompile.cache
+D:\teleretro\NuevaApp\NuevaApp\obj\Debug\NuevaApp_MarkupCompile.lref
+D:\teleretro\NuevaApp\NuevaApp\obj\Debug\MainWindow.baml
+D:\teleretro\NuevaApp\NuevaApp\obj\Debug\NuevaApp.g.resources
+D:\teleretro\NuevaApp\NuevaApp\obj\Debug\NuevaApp.Properties.Resources.resources
+D:\teleretro\NuevaApp\NuevaApp\obj\Debug\NuevaApp.csproj.GenerateResource.cache
+D:\teleretro\NuevaApp\NuevaApp\obj\Debug\NuevaApp.csproj.CoreCompileInputs.cache
+D:\teleretro\NuevaApp\NuevaApp\obj\Debug\NuevaApp.exe
+D:\teleretro\NuevaApp\NuevaApp\obj\Debug\NuevaApp.pdb
