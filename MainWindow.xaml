@@ -68,8 +68,8 @@
                 <TextBox BorderThickness="0" IsReadOnly="True" Name="ramDisp" Canvas.Left="205" TextWrapping="Wrap" Canvas.Top="110" Width="56" Height="20"  FontFamily="Cascadia Mono SemiLight" HorizontalAlignment="Center" VerticalAlignment="Top"/>
                 <Label Content="VELOCIDAD:" Canvas.Left="33" Canvas.Top="151" FontFamily="Cascadia Mono" HorizontalAlignment="Left" VerticalAlignment="Top"/>
                 <TextBox BorderThickness="0" IsReadOnly="True" Name="ramVel" Canvas.Left="205" TextWrapping="Wrap" Canvas.Top="155" Width="116" Height="20"  FontFamily="Cascadia Mono SemiLight" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-                <ProgressBar Name="barRam" Height="65" Canvas.Left="460" Canvas.Top="130" Width="357" HorizontalAlignment="Left" VerticalAlignment="Top" Minimum="0"/>
-                <Label Name="usoRamText" Content="USO DE RAM" Canvas.Left="584" Canvas.Top="88" FontFamily="Cascadia Mono" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                <ProgressBar Name="barRam" Height="65" Canvas.Left="414" Canvas.Top="108" Width="357" HorizontalAlignment="Left" VerticalAlignment="Top" Minimum="0"/>
+                <Label Name="usoRamText" Content="USO DE RAM" Canvas.Left="538" Canvas.Top="66" FontFamily="Cascadia Mono" HorizontalAlignment="Left" VerticalAlignment="Top"/>
 
             </Canvas>
 
