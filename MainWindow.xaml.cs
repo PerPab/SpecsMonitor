@@ -26,9 +26,7 @@ using ProgressBar = System.Windows.Controls.ProgressBar;
 
 namespace NuevaApp
 {
-    /// <summary>
-    /// Lógica de interacción para MainWindow.xaml
-    /// </summary>
+    
     public partial class MainWindow : Window
     {
         public MainWindow()
@@ -107,6 +105,7 @@ namespace NuevaApp
             bateriaText.Text = pwr.PowerLineStatus.ToString().ToUpper() == "ONLINE" ? "CARGANDO" : "DESCARGANDO";
 
             bar.Value = (int)(pwr.BatteryLifePercent * 100);
+            cargaText.Content += $" AL {(int)(pwr.BatteryLifePercent * 100)} %";
         }
 
 
@@ -125,6 +124,10 @@ namespace NuevaApp
 
             barRam.Maximum = ramGB;
             barRam.Value = ramGB - ramDisGb;
+
+            var ramEnUso = ramGB - ramDisGb;
+
+            usoRamText.Content += $" {100* ramEnUso / ramGB} %";
 
         }
 
@@ -152,7 +155,7 @@ namespace NuevaApp
             public string capTotal { get; set; }
             public string capDis { get; set; }
             public string formato { get; set; }
-            public long progreso { get; set; }
+            //public string progreso { get; set; }
         }
 
         public void setBar()
@@ -170,12 +173,14 @@ namespace NuevaApp
             {
                 var GB = 1024 * 1024 * 1024;
 
-                ProgressBar pb = new ProgressBar();
+                //ProgressBar pb = new ProgressBar();
 
-                pb.Width = 130;
-                pb.Minimum = 0;
-                pb.Maximum = drive.TotalSize / GB;
-                pb.Value = (drive.TotalSize / GB) - (drive.TotalFreeSpace / GB);
+                //pb.Width = 130;
+                //pb.Minimum = 0;
+                //pb.Maximum = drive.TotalSize / GB;
+                //pb.Value = (drive.TotalSize / GB) - (drive.TotalFreeSpace / GB);
+
+              
 
 
                 discosDisponibles.Add(new Disco()
@@ -185,7 +190,7 @@ namespace NuevaApp
                     capTotal = $"{drive.TotalSize / GB} GB",
                     capDis = $"{drive.TotalFreeSpace / GB} GB",
                     formato = drive.DriveFormat,
-                    progreso = (drive.TotalSize / GB) - (drive.TotalFreeSpace / GB)
+                    //progreso = $" {drive.TotalFreeSpace / drive.TotalSize} %"
 
                 }) ;
 
